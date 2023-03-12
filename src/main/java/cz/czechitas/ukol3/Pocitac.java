@@ -22,8 +22,8 @@ public class Pocitac {
 
 
     public String toString() {
-        return ("Pocitac je zapnuty " + jeZapnuty + ".  Ma procesor: "
-                + cpu + " , pamet: " + ram + ", a disk:  " + pevnyDisk);
+        return ("Pocitac je zapnuty " + jeZapnuty + ".  Procesor: "
+                + cpu + " . Pamet: " + ram + ". Disk: " + pevnyDisk) + ".";
     }
 
 
@@ -48,4 +48,27 @@ public class Pocitac {
             System.out.println("Pocitac je vypnuty, tzn. jeZapnuty = " + jeZapnuty);
         }
     }
+
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (jeZapnuty) {
+            if (pevnyDisk.getVyuziteMisto() + velikost > pevnyDisk.getKapacita()) {
+                System.err.println("Nejde provest, protoze nove vytvareny soubor se nevleze na disk.");
+            } else {
+                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() + velikost);
+                // System.out.println("Soubor vytvoren.");
+            }
+        }
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        if (jeZapnuty) {
+            if (pevnyDisk.getVyuziteMisto() - velikost < 0) {
+                System.err.println("Nejde provest, protoze velikost mazaneho souboru je nesmysl.");
+            } else {
+                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+                // System.out.println("Soubor smazany.");
+            }
+        }
+    }
+
 }

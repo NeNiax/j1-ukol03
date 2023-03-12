@@ -14,6 +14,6 @@ public class Procesor {
     public long rychlost;
 
     public String toString() {
-        return ("Procesor je od vyrobce " + vyrobce + " a ma rychlost " + rychlost + "Hz.");
+        return ("Procesor je od vyrobce " + vyrobce + " a ma rychlost " + rychlost + "Hz");
     }
 }

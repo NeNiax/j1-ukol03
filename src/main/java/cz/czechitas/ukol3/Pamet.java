@@ -6,9 +6,13 @@ public class Pamet {
         this.kapacita = kapacita;
     }
 
+//    public long getKapacita() {
+//        return kapacita;
+//    }
+
     public long kapacita;
 
     public String toString() {
-        return ("Kapacita pameti je " + kapacita + " bajtu.");
+        return ("Kapacita pameti je " + kapacita + " bajtu");
     }
 }
