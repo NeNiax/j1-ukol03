@@ -1,16 +1,13 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 public class Pamet {
+
+
+    private long kapacita;
 
     public void setKapacita(long kapacita) {
         this.kapacita = kapacita;
     }
-
-//    public long getKapacita() {
-//        return kapacita;
-//    }
-
-    public long kapacita;
 
     public String toString() {
         return ("Kapacita pameti je " + kapacita + " bajtu");

@@ -1,6 +1,9 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 public class Procesor {
+
+    private String vyrobce;
+    private long rychlost;
 
     public void setVyrobce(String vyrobce) {
         this.vyrobce = vyrobce;
@@ -9,9 +12,6 @@ public class Procesor {
     public void setRychlost(long rychlost) {
         this.rychlost = rychlost;
     }
-
-    public String vyrobce;
-    public long rychlost;
 
     public String toString() {
         return ("Procesor je od vyrobce " + vyrobce + " a ma rychlost " + rychlost + "Hz");

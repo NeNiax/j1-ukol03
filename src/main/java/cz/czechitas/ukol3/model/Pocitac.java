@@ -1,30 +1,12 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 public class Pocitac {
 
-    public void setCpu(Procesor cpu) {
-        this.cpu = cpu;
-    }
+    private boolean jeZapnuty;
+    private Procesor cpu;
+    private Pamet ram;
+    private Disk pevnyDisk;
 
-    public void setRam(Pamet ram) {
-        this.ram = ram;
-    }
-
-
-    public void setPevnyDisk(Disk pevnyDisk) {
-        this.pevnyDisk = pevnyDisk;
-    }
-
-    public boolean jeZapnuty;
-    public Procesor cpu;
-    public Pamet ram;
-    public Disk pevnyDisk;
-
-
-    public String toString() {
-        return ("Pocitac je zapnuty " + jeZapnuty + ".  Procesor: "
-                + cpu + " . Pamet: " + ram + ". Disk: " + pevnyDisk) + ".";
-    }
 
 
     public void zapniSe() {
@@ -71,4 +53,21 @@ public class Pocitac {
         }
     }
 
+
+    public void setCpu(Procesor cpu) {
+        this.cpu = cpu;
+    }
+
+    public void setRam(Pamet ram) {
+        this.ram = ram;
+    }
+
+    public void setPevnyDisk(Disk pevnyDisk) {
+        this.pevnyDisk = pevnyDisk;
+    }
+
+    public String toString() {
+        return ("Pocitac je zapnuty " + jeZapnuty + ".  Procesor: "
+                + cpu + " . Pamet: " + ram + ". Disk: " + pevnyDisk) + ".";
+    }
 }
